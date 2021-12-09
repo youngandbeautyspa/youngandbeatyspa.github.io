@@ -1,8 +1,3 @@
-@font-face {
-    font-family: 'agentred';
-    src: url('../fonts/agentred.ttf');
-}
-
 body{
   height: 100%;
   width: 100%;
@@ -112,7 +107,7 @@ body{
   width: 70%;
   margin: 2% auto;
   background-color: #FFF1DC;
-  font-family: 'agentred';
+  font-family: 'Fascinate Inline', cursive;
   display: flex;
   flex-direction: column;
   padding: 5vh 0 15vh 0;
