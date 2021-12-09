@@ -1,28 +1,193 @@
-body{
-  background-color: #F3D792;
-  display: flex;
-  adjust-content: middle;
-  margin:0;
+@font-face {
+    font-family: 'agentred';
+    src: url('../fonts/agentred.ttf');
 }
 
-.logo{
-  width:50%;
-  margin-bottom: 10px;
+body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }
 
 .mainContainer{
-  text-align:center;
-  background-color: white;
-  margin:auto;
-  padding: 5vh;
-  font-size: 2vh;
-  font-family: 'Russo One', sans-serif;
-  width:40vh;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #ebd7b0;
 }
 
-@media only screen and (max-width: 480px) {
-  .mainContainer{
-    width: 70vw;
-    padding: 10vw;
-  }
+.headerSection{
+  width: 100%;
+  height: 28vh;
+  background-color: #fff9eb;
+  box-shadow: 0 3px 3px -3px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerSection{
+  width: 100%;
+  height: 16vh;
+  background-color: #fff9eb;
+  box-shadow: 0 -3px 3px -3px black;
+  text-align: center;
+}
+
+.mainSection{
+  min-height: 56vh;
+}
+
+.logo{
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 5vw;
+}
+
+.logoImg{
+  height:15vh;
+}
+
+.socialMedia{
+  width:fit-content;
+  margin:auto;
+}
+
+.socialIcon{
+  height:3vh;
+  padding:1vh;
+}
+
+.navMenu {
+  overflow: hidden;
+  display: inline-block;
+  float: right;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  margin: 2vh 5vh 0 0;
+}
+
+.dropdown-content{
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  top: 17vh;
+  width: 18vh;
+  background-color: #fff9eb;
+  text-align: center;
+}
+
+.dropdown-content a{
+  color: #034b8f;
+  text-align: center;
+  text-decoration: none;
+  padding: 2vh 1vh;
+  font-size: 1.8vh;
+  font-family: 'Russo One', sans-serif;
+}
+
+.dropdown-content a:hover{
+  color: #8a7319;
+}
+
+.menuItem {
+  float: left;
+  color: #034b8f;
+  text-align: center;
+  padding: 2vh 4vh;
+  text-decoration: none;
+  width: 10vh;
+  font-size: 1.8vh;
+  font-family: 'Russo One', sans-serif;
+}
+
+.menuItem:hover {
+  color: #8a7319;
+}
+
+.servicesContainer{
+  width: 70%;
+  margin: 2% auto;
+  background-color: #FFF1DC;
+  font-family: 'agentred';
+  display: flex;
+  flex-direction: column;
+  padding: 5vh 0 15vh 0;
+  justify-content: center;
+  text-align: center;
+}
+
+.servicesContainer a{
+  text-decoration: none;
+  text-align: middle;
+  font-size: 3vh;
+}
+
+.carouselImg{
+  margin: auto;
+  height:20vh;
+}
+
+.emailRegistry{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emailOverlay{
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: rgb(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.emailModal{
+  position: relative;
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 30vw;
+  height: 30vh;
+  background-color: #ebd7b0;
+  z-index: 2;
+  text-align: center;
+}
+
+.emailText{
+  text-align: center;
+  font-family: 'Fredoka One', cursive;
+  padding: 2vh 0 0 0;
+  font-size: 3vh;
+}
+
+.submitBtn{
+    font-family: 'Fredoka One', cursive;
+    height: 4vh;
+    width: 8vw;
+    display: block;
+    margin:2vh auto;
+}
+
+.emailInput{
+  margin: auto;
+  width: 20vw;
+  height: 5vh;
+  font-size: 2.4vh;
+}
+
+.closeModal{
+  position: absolute;
+  font-family: 'Fredoka One', cursive;
+  right: 2vh;
+  top: 0;
+  cursor: pointer;
+  font-size: 2vh;
 }
