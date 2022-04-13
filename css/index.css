@@ -7,30 +7,40 @@ body{
 .mainContainer{
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   background-color: #ebd7b0;
 }
 
 .headerSection{
   width: 100%;
-  height: 28vh;
-  background-color: #fff9eb;
+  height: 15%;
+  background-color: #ebd7b0;
   box-shadow: 0 3px 3px -3px black;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .footerSection{
   width: 100%;
-  height: 16vh;
-  background-color: #fff9eb;
+  height: 12%;
+  background-color: #ebd7b0;
   box-shadow: 0 -3px 3px -3px black;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .mainSection{
-  min-height: 56vh;
+  height: 73%;
+  position: relative;
+}
+
+.carouselContainer{
+  height: 100%;
+  width: 100%;
 }
 
 .logo{
@@ -39,30 +49,38 @@ body{
   justify-content: center;
   flex-direction: column;
   margin-right: 5vw;
+  height: 100%;
+  position: absolute;
+  left: 5%;
 }
 
 .logoImg{
-  height:15vh;
+  height:80%;
 }
 
 .socialMedia{
   width:fit-content;
-  margin:auto;
+  position: absolute;
+  bottom: 3%;
+  left: 5%;
+  z-index: 100;
 }
 
 .socialIcon{
-  height:3vh;
-  padding:1vh;
+  height:40px;
+  padding:5px;
+  filter: invert(1);
 }
 
 .navMenu {
   overflow: hidden;
   display: inline-block;
   float: right;
-  height: 15vh;
+  height: 100%;
   display: flex;
   align-items: center;
-  margin: 2vh 5vh 0 0;
+  position: absolute;
+  right: 5%;
 }
 
 .dropdown-content{
@@ -94,7 +112,6 @@ body{
   text-align: center;
   padding: 2vh 4vh;
   text-decoration: none;
-  width: 10vh;
   font-size: 1.8vh;
   font-family: 'Russo One', sans-serif;
 }
@@ -185,4 +202,56 @@ body{
   top: 0;
   cursor: pointer;
   font-size: 2vh;
+}
+
+.carousel{
+  height: 100%;
+}
+
+.carousel-inner{
+  height: 100%;
+}
+
+.book-button{
+  border: 0;
+  background-color: #e63415;
+  color: white;
+  height: 40px;
+  width: 110px;
+}
+
+.main-overlay{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 101;
+}
+
+.overlay-text-1{
+  width: 40%;
+  position: absolute;
+  font-size: 30px;
+  top: 5%;
+  left: 5%;
+  color: white;
+}
+
+.overlay-text-2{
+  width: 40%;
+  position: absolute;
+  font-size: 30px;
+  right: 5%;
+  bottom: 5%;
+  text-align: right;
+  color: white;
+}
+
+.center-book-now{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
 }
