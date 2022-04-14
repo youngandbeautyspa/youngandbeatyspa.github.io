@@ -248,6 +248,11 @@ body{
   color: white;
 }
 
+.carouselContainer{
+  z-index: 10000;
+  position: relative;
+}
+
 .center-book-now{
   position: absolute;
   top: 50%;
