@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -16,7 +14,7 @@
   </head>
   <body>
     <div class="mainContainer">
-      <div class="headerSection">
+      <div class="headerSection fader fadeOut">
         <div class="logo">
           <img class="logoImg" src="images/logo.png"/>
         </div>
@@ -32,24 +30,6 @@
         </div>
       </div>
       <div class="mainSection">
-        <div class="socialMedia">
-          <a><img class="socialIcon" src="images/instaIcon.png"></a>
-          <a><img class="socialIcon" src="images/faceIcon.png"></a>
-          <a><img class="socialIcon" src="images/twitterIcon.png"></a>
-        </div>
-        <div class="main-overlay">
-          <p class="overlay-text-1">
-            We can help out Max Out your Beauty
-          </p>
-          <a class="center-book-now" href="https://booking.mangomint.com/206933">
-            <button class="book-button">
-              BOOK NOW
-            </button>
-          </a>
-          <p class="overlay-text-2">
-            with our best services and products
-          </p>
-        </div>
         <div class="carouselContainer">
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -93,12 +73,121 @@
               <span class="glyphicon glyphicon-chevron-right"></span>
               <span class="sr-only">Next</span>
             </a>
+
+            <div class="main-overlay fader fadeOut">
+              <p class="overlay-text-1">
+                We can help out Max Out your Beauty
+              </p>
+              <a class="center-book-now" href="https://booking.mangomint.com/206933">
+                <button class="book-button">
+                  BOOK NOW
+                </button>
+              </a>
+              <p class="overlay-text-2">
+                with our best services and products
+              </p>
+            </div>
+
+            <div class="socialMedia fader fadeOut">
+              <a><img class="socialIcon" src="images/instaIcon.png"></a>
+              <a><img class="socialIcon" src="images/faceIcon.png"></a>
+              <a><img class="socialIcon" src="images/twitterIcon.png"></a>
+            </div>
           </div>
         </div>
       </div>
+      <div class="contentSection">
+        <div class="titleContent">
+          <p class="titleElemHeader fader fadeOut">
+            Young and Beauty Spa
+          </p>
+          <p class="titleElemBody fader fadeOut">
+            we are located in Easton PA and provide services such as Skin Care Treatment, Forest Treatment, Nail Service, and Waxing.
+          </p>
+        </div>
+        <div class="service-cards fader fadeOut">
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="images/c/skin.jpg">
+                <p class="flip-card-front-title">
+                  Skin Care
+                </p>
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  Skin Care
+                </p>
+                <p>
+                  Skin Care Description
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="images/c/forest.jpg">
+                <p class="flip-card-front-title">
+                  Forest Treatment
+                </p>
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  Forest Treatment
+                </p>
+                <p>
+                  Forest Treatment Description
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="images/c/nail.jpg">
+                <p class="flip-card-front-title">
+                  Nail Care
+                </p>
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  Nail Care
+                </p>
+                <p>
+                  Nail Care Description
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="images/c/waxing.jpg">
+                <p class="flip-card-front-title">
+                  Waxing
+                </p>
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  Waxing
+                </p>
+                <p>
+                  Waxing Description
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
       <div class="footerSection">
-        <p>youngandbeautyspa@gmail.com</p>
-        <p>234 Address St City, New York 11111</p>
+        <p class="fader fadeOut">youngandbeautyspa@gmail.com</p>
+        <p class="fader fadeOut">306 Stones Crossing Road, Palmer Township PA 18045</p>
       </div>
     </div>
   </body>
@@ -115,5 +204,28 @@
     const hideModal = (target) => {
        document.getElementById(target).style.display = "none";
     }
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.7
+    };
+
+    function observerCallback(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // fade in observed elements that are in view
+          entry.target.classList.replace('fadeOut', 'fadeIn');
+        } else {
+          // fade out observed elements that are not in view
+          entry.target.classList.replace('fadeIn', 'fadeOut');
+        }
+      });
+    }
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    const fadeElms = document.querySelectorAll('.fader');
+    fadeElms.forEach(el => observer.observe(el));
   </script>
 </html>
