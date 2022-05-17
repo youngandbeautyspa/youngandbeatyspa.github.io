@@ -301,6 +301,10 @@ body{
   flex-direction: column;
 }
 
+.flip-card-back > p{
+  padding: 10px;
+}
+
 .flip-card-front-title{
   position: absolute;
   top: 50%;
@@ -325,3 +329,17 @@ body{
 
 .fadeOut { opacity: 0; }
 .fadeIn { opacity: 1; }
+
+@media only screen and (max-width: 600px) {
+  .service-cards {
+    flex-direction: column;
+  }
+
+  .flip-card{
+    margin-bottom: 20px;
+  }
+
+  .carousel-inner > .item > img {
+    object-fit: cover;
+  }
+}
