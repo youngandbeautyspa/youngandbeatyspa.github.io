@@ -343,4 +343,17 @@ body{
   .carousel-inner > .item > img {
     object-fit: cover;
   }
+
+  .menuItem{
+    font-size: 9px;
+    padding: 5px;
+  }
+
+  .menuItem p{
+    margin: 5px;
+  }
+
+  .navMenu{
+    right: 5px;
+  }
 }
