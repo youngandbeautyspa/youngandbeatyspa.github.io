@@ -78,7 +78,7 @@ body{
   position: absolute;
   bottom: 3%;
   left: 5%;
-  z-index: 100;
+  z-index: 50000;
 }
 
 .socialIcon{
@@ -127,7 +127,7 @@ body{
   text-align: center;
   padding: 2vh 4vh;
   text-decoration: none;
-  font-size: 1.8vh;
+  font-size: 20px;
   font-family: 'Philosopher';
 }
 
@@ -187,11 +187,12 @@ body{
 
 .book-button{
   border: 0;
-  background-color: #fffee8;
-  color: #383838;
+  background-color: #824e1e;
+  color: white;
   height: 40px;
-  width: 110px;
+  width: 120px;
   border-radius: 20px;
+  font-size: 19px;
 }
 
 .main-overlay{
@@ -332,6 +333,11 @@ body{
 .fadeIn { opacity: 1; }
 
 @media only screen and (max-width: 600px) {
+  .overlay-text-1{
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
   .service-cards {
     flex-direction: column;
   }
@@ -345,7 +351,7 @@ body{
   }
 
   .menuItem{
-    font-size: 9px;
+    font-size: 10px;
     padding: 5px;
   }
 
