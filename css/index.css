@@ -189,8 +189,7 @@ body{
   border: 0;
   background-color: #824e1e;
   color: white;
-  height: 40px;
-  width: 120px;
+  padding: 5px 10px;
   border-radius: 20px;
   font-size: 19px;
 }
