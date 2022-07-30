@@ -361,4 +361,8 @@ body{
   .navMenu{
     right: 5px;
   }
+
+  .phoneNum{
+    font-size: 12px;
+  }
 }
