@@ -12,6 +12,11 @@ body{
   transform: translate(-50%, -50%);
 }
 
+#mc_embed_signup{
+  width: 400px;
+  background-color: #c9bda1 !important;
+}
+
 #mc_embed_signup .mc-field-group{
   display: flex !important;
   flex-direction: column;
@@ -24,13 +29,18 @@ body{
   text-align: center;
 }
 
+#mc_embed_signup p{
+  margin: 0 !important;
+  text-align: center;
+}
+
 #mc_embed_signup #mce-success-response{
   margin: auto;
   text-align: center;
 }
 
 #mc_embed_signup .foot{
-  width: 100%;
+  width: 100% !important;
   display: flex !important;
   padding: 15px 0;
 }
