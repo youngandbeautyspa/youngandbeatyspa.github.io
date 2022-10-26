@@ -12,6 +12,33 @@ body{
   transform: translate(-50%, -50%);
 }
 
+#mc_embed_signup .mc-field-group{
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  width: 100% !important;
+}
+
+#mc_embed_signup h2{
+  margin: 0 !important;
+  text-align: center;
+}
+
+#mc_embed_signup #mce-success-response{
+  margin: auto;
+  text-align: center;
+}
+
+#mc_embed_signup .foot{
+  width: 100%;
+  display: flex !important;
+  padding: 15px 0;
+}
+
+#mc_embed_signup .button{
+  margin: auto !important;
+}
+
 .mainContainer{
   width: 100%;
   height: 100%;
